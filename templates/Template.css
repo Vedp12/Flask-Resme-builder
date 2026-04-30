@@ -1,0 +1,26 @@
+.card {
+  width: 850px;
+  background-color: #eeebeb;
+  height: 1190px;
+  z-index: 1;
+  border-radius: 8px;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.Resume_Data_header {
+  background-color: rgb(19, 17, 17);
+  color: rgb(223, 233, 242);
+  /* padding-left: 8px; */
+  /* padding-right: 2px; */
+  text-align: center;
+  
+}
+
+
+
+.Resume_Data_body {
+  padding: 3px 5px 6px 9px;
+}

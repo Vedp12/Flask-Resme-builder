@@ -1,0 +1,322 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #f8fafd;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          sans-serif;
+        padding: 24px 32px;
+        min-height: 100vh;
+      }
+
+      :root {
+        --brand-primary: #0d1672;
+        --brand-light: #eef0fc;
+        --brand-soft: #e6e9ff;
+        --brand-hover: #1e2a9e;
+        --brand-border: #cdd4ff;
+        --gray-dark: #1e293b;
+        --gray-mid: #475569;
+        --gray-light: #f1f5f9;
+      }
+
+      .full-width-nav {
+        width: 100%;
+        background: white;
+        border-radius: 80px;
+        box-shadow:
+          0 8px 24px rgba(0, 0, 0, 0.04),
+          0 2px 4px rgba(0, 0, 0, 0.02);
+        padding: 0.75rem 1.75rem;
+        transition: all 0.2s ease;
+        border: 1px solid rgba(13, 22, 114, 0.12);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+      }
+
+      .search-section {
+        flex: 1 1 auto;
+        min-width: 240px;
+        max-width: 380px;
+      }
+      .nav-actions-group {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .search-wrapper {
+        position: relative;
+        width: 100%;
+        transition: all 0.2s;
+      }
+
+      .search-input {
+        width: 100%;
+        height: 52px;
+        padding: 0 1.25rem 0 3rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        background: var(--gray-light);
+        border: 1.5px solid transparent;
+        border-radius: 60px;
+        outline: none;
+        transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+        color: #0f172a;
+        font-family: inherit;
+      }
+
+      .search-input::placeholder {
+        color: #5b6e8c;
+        font-weight: 450;
+      }
+
+      .search-input:focus {
+        border-color: var(--brand-primary);
+        background: white;
+        box-shadow: 0 0 0 4px rgba(13, 22, 114, 0.12);
+      }
+
+      .search-icon {
+        position: absolute;
+        left: 1.2rem;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .search-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: var(--brand-primary);
+        stroke-width: 1.8;
+        fill: none;
+      }
+
+      .reset-search-btn {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+        border-radius: 50%;
+      }
+
+      .reset-search-btn svg {
+        width: 18px;
+        height: 18px;
+        stroke: #64748b;
+        stroke-width: 2;
+      }
+
+      .reset-search-btn:hover svg {
+        stroke: #0f172a;
+      }
+
+      /* show reset button when input has text */
+      .search-input:not(:placeholder-shown) ~ .reset-search-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* ----- NAVIGATION BUTTONS (modern pill style, match brand primary) ----- */
+      .nav-buttons {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .nav-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0.5rem 1.2rem;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        background: transparent;
+        border: 1.5px solid #e2e8f0;
+        color: var(--gray-dark);
+        transition: all 0.2s ease;
+        cursor: pointer;
+        background: white;
+        font-family: inherit;
+        letter-spacing: -0.2px;
+      }
+
+      .nav-pill svg {
+        width: 18px;
+        height: 18px;
+        stroke: var(--brand-primary);
+        stroke-width: 1.7;
+        fill: none;
+        transition: stroke 0.2s;
+      }
+
+      /* home icon uses slightly different fill for brand accent */
+      .nav-pill .home-icon {
+        fill: var(--brand-primary);
+        stroke: none;
+      }
+
+      .nav-pill:hover {
+        border-color: var(--brand-primary);
+        background: var(--brand-light);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(13, 22, 114, 0.08);
+        color: var(--brand-primary);
+      }
+
+      .nav-pill:hover svg {
+        stroke: var(--brand-primary);
+      }
+
+      /* ----- PROFILE ICON (rounded, brand emphasis, right aligned) ----- */
+      .profile-icon {
+        background: var(--gray-light);
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: 1.5px solid transparent;
+        margin-left: 4px;
+      }
+
+      .profile-icon svg {
+        width: 26px;
+        height: 26px;
+        stroke: var(--brand-primary);
+        stroke-width: 1.6;
+        fill: none;
+      }
+
+      .profile-icon:hover {
+        background: var(--brand-soft);
+        border-color: var(--brand-border);
+        transform: scale(0.96);
+        box-shadow: 0 4px 12px rgba(13, 22, 114, 0.15);
+      }
+
+      @media (max-width: 850px) {
+        body {
+          padding: 20px 20px;
+        }
+        .full-width-nav {
+          padding: 0.9rem 1.25rem;
+          border-radius: 60px;
+        }
+        .search-section {
+          min-width: 200px;
+          flex: 2 1 260px;
+        }
+        .nav-pill {
+          padding: 0.45rem 1rem;
+          font-size: 0.85rem;
+        }
+        .profile-icon {
+          width: 44px;
+          height: 44px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .nav-container {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 1rem;
+        }
+        .search-section {
+          max-width: 100%;
+          width: 100%;
+        }
+        .nav-actions-group {
+          justify-content: space-between;
+          width: 100%;
+        }
+        .nav-buttons {
+          flex: 2;
+          justify-content: flex-start;
+        }
+        .profile-icon {
+          margin-left: 0;
+        }
+        .full-width-nav {
+          border-radius: 32px;
+          padding: 1rem 1.2rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .nav-buttons {
+          width: 100%;
+          justify-content: center;
+        }
+        .nav-actions-group {
+          flex-wrap: wrap;
+          gap: 0.8rem;
+        }
+        .nav-pill {
+          padding: 0.4rem 0.9rem;
+          font-size: 0.8rem;
+        }
+        .profile-icon {
+          width: 42px;
+          height: 42px;
+        }
+        .search-input {
+          height: 48px;
+        }
+      }
+
+      /* small extra touch: active/focus for accessibility */
+      .nav-pill:focus-visible,
+      .profile-icon:focus-visible,
+      .reset-search-btn:focus-visible {
+        outline: 2px solid var(--brand-primary);
+        outline-offset: 2px;
+        border-radius: 40px;
+      }
+
+      .hero-mock {
+        margin-top: 40px;
+        text-align: center;
+        color: #334155;
+      }
+      hr {
+        margin-top: 28px;
+        opacity: 0.2;
+      }
