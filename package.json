@@ -1,0 +1,26 @@
+{
+  "name": "flask-resme-builder",
+  "version": "1.0.0",
+  "description": "This repostory I build to make a project in flask called Resume builder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vedp12/Flask-Resme-builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Vedp12/Flask-Resme-builder/issues"
+  },
+  "homepage": "https://github.com/Vedp12/Flask-Resme-builder#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.12",
+    "tailwindcss": "^4.2.4"
+  }
+}

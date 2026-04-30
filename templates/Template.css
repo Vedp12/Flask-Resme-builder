@@ -1,26 +1,69 @@
+@import "tailwindcss";
+
+.main_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  /* padding-bottom: 4px; */
+}
 .card {
   width: 850px;
   background-color: #eeebeb;
   height: 1190px;
-  z-index: 1;
+  /* z-index: 1; */
   border-radius: 8px;
+}
 
+.Resume_Data_header {
+  background-color: rgb(19, 17, 17);
+  color: rgb(223, 233, 242);
+  text-align: center;
+}
+
+.Resume_Data_body {
+  padding: 0px 5px 6px 9px;
+}
+
+.link_body {
+  text-align: center;
+}
+
+@import "tailwindcss";
+
+/* Layout Wrapper: Splitting Preview and Form */
+.main_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
 }
+
+/* The Resume Sheet: Fixed Dimensions */
+.card {
+  width: 850px;
+  height: 1190px;
+  background-color: #eeebeb;
+  border-radius: 8px;
+}
+
+/* Typography & Visual Accents */
 .Resume_Data_header {
   background-color: rgb(19, 17, 17);
   color: rgb(223, 233, 242);
-  /* padding-left: 8px; */
-  /* padding-right: 2px; */
   text-align: center;
-  
 }
 
-
-
 .Resume_Data_body {
-  padding: 3px 5px 6px 9px;
+  padding: 0px 5px 6px 9px;
+}
+
+.link_body {
+  text-align: center;
 }
