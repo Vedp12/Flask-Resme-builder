@@ -1,23 +1,4 @@
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #f8fafd;
-        font-family:
-          "Inter",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Helvetica,
-          sans-serif;
-        padding: 24px 32px;
-        min-height: 100vh;
-      }
-
+    
       :root {
         --brand-primary: #0d1672;
         --brand-light: #eef0fc;
