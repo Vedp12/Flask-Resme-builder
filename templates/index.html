@@ -1,0 +1,22 @@
+{% extends "nav_bar.html" %} {% block content %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}"
+    />
+  </head>
+  <body>
+    <!-- <a class="nav-link" href="">login</a> -->
+    <a href="{{ url_for('detail') }}">
+    <div class="index_card1">
+        <div class="inside_index_card1"></div>
+    </div></a>
+  </body>
+</html>
+{% endblock %}

@@ -12,6 +12,10 @@
         crossorigin="anonymous"
     />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Template.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template_body.css') }}"/>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,500;0,1000;1,400;1,900&display=swap');
+</style>
 </head>
 <body>
     <div class="main_container">
@@ -94,7 +98,24 @@
             </div>
           </div>
           <div class="rightside_container">
-            {% block Template_R %} {% endblock %}
+            <h1 class="rightside_container_text"> How your resume Template <br>look like</h1>
+            <div class="template_page_btns">
+
+                <button type="submit" id="back_btn_edit" >
+                    <a href="{{ url_for('detail') }}" style="color: inherit;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z" clip-rule="evenodd" />
+                    </svg>
+                    <span id="back_text">Edit</span>
+                    </a>
+                </button>
+                <button type="submit" id="next_btn_edit" >
+                    <span>Next</span>
+                    <div class="arrow-wrapper">
+                        <div class="arrow"></div>
+                    </div>
+                </button>
+            </div>            
           </div>  
         </div>
 

@@ -1,0 +1,37 @@
+/* From Uiverse.io by SteveBloX */
+.index_card1 {
+  box-sizing: border-box;
+  width: 190px;
+  height: 254px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin: 35px;
+  overflow: hidden;
+}
+
+.index_card1:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.index_card1:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+.inside_index_card1{
+  width: 200px;
+  height: 44px;
+  background-color: black;
+  margin-bottom: 238px;
+}
