@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume - Template 2</title>
+    <style>
+        body { font-family: Georgia; }
+        .sidebar { float: left; width: 30%; background: #e6f7ff; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>{{ name }}</h1>
+        <h3>Skills</h3>
+        <ul>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="main">
+        <h2>Experience</h2>
+        <ul>
+            {% for exp in experience %}
+                <li>{{ exp }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

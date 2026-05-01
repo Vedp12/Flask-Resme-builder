@@ -67,3 +67,135 @@
 .link_body {
   text-align: center;
 }
+
+/** Right side  */
+.data_form {
+  margin-top: 20%;
+  width: 40%;
+  height: 34%;
+  background-color: rgb(243, 238, 238);
+  padding: 30px;
+  border-radius: 24px;
+  margin-left: 60px;
+}
+
+.inside_div_data_form {
+  padding-left: 25px;
+}
+.input-style {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  outline: none;
+}
+
+.input-style:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+#text_style {
+  width: 70%;
+  height: 85px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #555;
+  /* outline: none; */
+}
+#text_style:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* From Uiverse.io by KINGFRESS */ 
+#right_submit_btn_id {
+  font-weight: bold;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 95.02px;
+  height: 42.66px;
+  border: none;
+  background-color: #3653f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3%;
+}
+
+#right_submit_btn_id .span-mother {
+  display: flex;
+  overflow: hidden;
+}
+
+#right_submit_btn_id:hover .span-mother {
+  position: absolute;
+}
+
+#right_submit_btn_id:hover .span-mother span {
+  transform: translateY(1.2em);
+}
+
+#right_submit_btn_id .span-mother span:nth-child(1) {
+  transition: 0.2s;
+}
+
+#right_submit_btn_id .span-mother span:nth-child(2) {
+  transition: 0.3s;
+}
+
+#right_submit_btn_id .span-mother span:nth-child(3) {
+  transition: 0.4s;
+}
+
+#right_submit_btn_id .span-mother span:nth-child(4) {
+  transition: 0.5s;
+}
+
+#right_submit_btn_id .span-mother span:nth-child(5) {
+  transition: 0.6s;
+}
+
+#right_submit_btn_id .span-mother span:nth-child(6) {
+  transition: 0.7s;
+}
+
+#right_submit_btn_id .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+#right_submit_btn_id .span-mother2 span {
+  transform: translateY(-1.2em);
+}
+
+#right_submit_btn_id:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+#right_submit_btn_id .span-mother2 span {
+  transition: 0.2s;
+}
+
+#right_submit_btn_id .span-mother2 span:nth-child(2) {
+  transition: 0.3s;
+}
+
+#right_submit_btn_id .span-mother2 span:nth-child(3) {
+  transition: 0.4s;
+}
+
+#right_submit_btn_id .span-mother2 span:nth-child(4) {
+  transition: 0.5s;
+}
+
+#right_submit_btn_id .span-mother2 span:nth-child(5) {
+  transition: 0.6s;
+}
+
+#right_submit_btn_id .span-mother2 span:nth-child(6) {
+  transition: 0.7s;
+}
