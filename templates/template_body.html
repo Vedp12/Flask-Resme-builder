@@ -1,4 +1,5 @@
 
+ <!--! It shows the template with the Correct name and body   -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,27 +98,34 @@
                 </div>
             </div>
           </div>
-          <div class="rightside_container">
-            <h1 class="rightside_container_text"> How your resume Template <br>look like</h1>
-            <div class="template_page_btns">
-
-                <button type="submit" id="back_btn_edit" >
-                    <a href="{{ url_for('detail') }}" style="color: inherit;">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-4.28 9.22a.75.75 0 0 0 0 1.06l3 3a.75.75 0 1 0 1.06-1.06l-1.72-1.72h5.69a.75.75 0 0 0 0-1.5h-5.69l1.72-1.72a.75.75 0 0 0-1.06-1.06l-3 3Z" clip-rule="evenodd" />
-                    </svg>
-                    <span id="back_text">Edit</span>
-                    </a>
-                </button>
-                <button type="submit" id="next_btn_edit" >
-                    <span>Next</span>
-                    <div class="arrow-wrapper">
-                        <div class="arrow"></div>
-                    </div>
-                </button>
-            </div>            
-          </div>  
+            <div class="card_right">
+        <div class="tools">
+            <div class="circle red"></div>
+            <div class="circle yellow"></div>
+            <div class="circle green"></div>
         </div>
+            <div class="card__content">
+                <form method="post">
+                    <div class="rightside_container">
+                        <h1 class="rightside_container_text">How your resume template looks like</h1>
+                        <h2>Enter Description</h2>
+                        <textarea placeholder="E.g :-I am an experienced digital marketer with 7 years of expertise in brand strategy." class="input-style"  name="User_Description" required></textarea>
+                        <div class="template_page_btns">
+                        <button type="submit" id="next_btn_edit">
+                            <a  style="color: inherit; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+                                <span>Next step</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+        
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpb5zoSMXKp4YfRvH+8abtTE1Pi6jizo"

@@ -1,0 +1,94 @@
+{% extends "nav_bar.html" %} {% block content %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/body_temp.css') }}"
+/>
+
+<section class="resume-builder-shell">
+  <div class="resume-builder-hero">
+    <div>
+      <h1>Work History</h1>
+    </div>
+  </div>
+
+  <div class="resume-builder-grid">
+    <aside class="editor-card">
+      <div class="editor-card__header">
+        <h2>Add Work details</h2>
+        <p>
+          Write two Experience entries that are easy to read and professionally
+          framed.
+        </p>
+      </div>
+
+      <form class="project-form" method="post">
+        <div class="field-group">
+          <label for="Project_name1">Work 1 name</label>
+          <input
+            type="text"
+            name="Work_name1"
+            id="Project_name1"
+            class="form-input"
+            placeholder="Example: Resume Builder Dashboard"
+          />
+        </div>
+        <div class="date-range">
+          <div class="input-group">
+            <label for="startdate_1">Start Date</label>
+            <input type="date" name="startdate_1" id="startdate_1" />
+          </div>
+
+          <div class="input-group">
+            <label for="enddate_1">End Date</label>
+            <input type="date" name="enddate_1" id="enddate_1" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="Project_description1">Work 1 description</label>
+          <textarea
+            name="Work_description1"
+            id="Project_description1"
+            class="form-textarea"
+            placeholder="Describe the Experience , projects , tools, and result in one or two sentences."
+          ></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="Project_name2">Work 2 name</label>
+          <input
+            type="text"
+            name="Work_name2"
+            id="Project_name2"
+            class="form-input"
+            placeholder="Example: Portfolio Site Refresh"
+          />
+        </div>
+        <div class="date-range">
+          <div class="input-group">
+            <label for="startdate_1">Start Date</label>
+            <input type="date" name="startdate_2" id="startdate_1" />
+          </div>
+
+          <div class="input-group">
+            <label for="enddate_1">End Date</label>
+            <input type="date" name="enddate_2" id="enddate_1" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="Project_description2">Work 2 description</label>
+          <textarea
+            name="Work_description2"
+            id="Project_description2"
+            class="form-textarea"
+            placeholder="Keep it crisp, specific, and results-focused."
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="primary-btn">Continue</button>
+        </div>
+      </form>
+    </aside>
+  </div>
+</section>
+{% endblock %}

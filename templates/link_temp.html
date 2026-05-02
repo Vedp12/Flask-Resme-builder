@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/link_template.css') }}"
+    />
+  </head>
+  <body>
+    <form method="post">
+      <div class="link-page">
+        <div class="link-list">
+          <div class="link_conainer">
+            <span class="prefix">http://</span>
+            <input
+              class="myinput-link"
+              placeholder="Site.com"
+              name="web_link1"
+            />
+            <span class="link-icon"> 🔗 </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="link-page">
+        <div class="link-list">
+          <div class="link_conainer">
+            <span class="prefix">http://</span>
+            <input
+              class="myinput-link"
+              placeholder="Site.com"
+              name="web_link2"
+            />
+            <span class="link-icon"> 🔗 </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="link-page">
+        <div class="link-list">
+          <div class="link_conainer">
+            <span class="prefix">http://</span>
+            <input
+              class="myinput-link"
+              placeholder="Site.com"
+              name="web_link3"
+            />
+            <span class="link-icon"> 🔗 </span>
+          </div>
+        </div>
+      </div>
+
+      <button class="add-link-btn" type="submit">Add Link</button>
+    </form>
+  </body>
+</html>
