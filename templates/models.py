@@ -29,12 +29,23 @@ class Description_model(db.Model):
     __tablename__ = "Resume_description_model"
     description_id = db.Column(db.Integer,primary_key = True)
     User_Description = db.Column(db.String(),nullable = False)
-    
-    def __ini__(
-        self,User_Description
+    skills1 = db.Column(db.String(),nullable = False)
+    skills2 = db.Column(db.String(),nullable = False)
+    skills3 = db.Column(db.String(),nullable = False)
+    skills4 = db.Column(db.String(),nullable = False)
+    def __init__(
+        self,
+        User_Description,
+        skills1,        
+        skills2,        
+        skills3,        
+        skills4   
     ):
-
         self.User_Description = User_Description
+        self.skills1 = skills1
+        self.skills2 = skills2
+        self.skills3 = skills3
+        self.skills4 = skills4 
     
 class Project_model(db.Model):
     __tablename__ = "Project_model"
