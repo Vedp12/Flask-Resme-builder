@@ -1,3 +1,5 @@
 package-lock.json
 package.json
 Branch
+instance/Resume.db
+templates/__pycache__
