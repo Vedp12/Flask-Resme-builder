@@ -1,0 +1,210 @@
+
+<!--* This is main template folder  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Template</title>
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Template.css') }}"/>
+</head>
+<body>
+                <form method="post">
+                    <input
+        placeholder="Enter Name"
+        class="input-style"
+        type="text"
+        name="Full_name"
+        value="{{ Header.Full_name }}"
+      />
+
+      <input
+        placeholder="Enter Email"
+        class="input-style"
+        type="email"
+        name="email"
+        value="{{ Header.email }}"
+      />
+
+      <input
+        placeholder="Enter Phone"
+        class="input-style"
+        type="number"
+        name="phone"
+        value="{{ Header.phone }}"
+      />
+      <textarea placeholder="E.g :-I am an experienced digital marketer with 7 years of expertise in brand strategy." class="input-style"  name="User_Description" value="{{ Description.User_Description }}"></textarea>
+                        <h3 style="margin-top: 20px; font-size: 1.1em;">Your Skills</h3>
+                        <input type="text" placeholder="Skill 1" class="input-style" name="skills1" value="{{ Description.skills1 }}">
+                        <input type="text" placeholder="Skill 2" class="input-style" name="skills2" value="{{ Description.skills2 }}">
+                        <input type="text" placeholder="Skill 3" class="input-style" name="skills3" value="{{ Description.skills3 }}">
+                        <input type="text" placeholder="Skill 4" class="input-style" name="skills4" value="{{ Description.skills4 }}">
+                    <label for="Project_name1">Project 1 name</label>
+          <input
+            type="text"
+            name="Project_name1"
+            id="Project_name1"
+            class="form-input"
+            placeholder="Example: Resume Builder Dashboard"
+            value="{{ Project.Project_name1 }}"
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="Project_description1">Project 1 description</label>
+          <textarea
+            name="Project_description1"
+            id="Project_description1"
+            class="form-textarea"
+            placeholder="Describe the goal, tools, and result in one or two sentences."
+            value="{{ Project.Project_description1 }}"
+          ></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="Project_name2">Project 2 name</label>
+          <input
+            type="text"
+            name="Project_name2"
+            id="Project_name2"
+            class="form-input"
+            placeholder="Example: Portfolio Site Refresh"
+            value="{{ Project.Project_name2 }}"
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="Project_description2">Project 2 description</label>
+          <textarea
+            name="Project_description2"
+            id="Project_description2"
+            class="form-textarea"
+            
+            placeholder="Keep it crisp, specific, and results-focused."
+          ></textarea>    
+          <div class="field-group">
+          <label for="Project_name1">Work 1 name</label>
+          <input
+            type="text"
+            name="Work_name1"
+            id="Project_name1"
+            class="form-input"
+            placeholder="Example: Resume Builder Dashboard"
+            value="{{ Work.Work_name1 }}"
+          />
+        </div>
+        <div class="date-range">
+          <div class="input-group">
+            <label for="startdate_1">Start Date</label>
+            <input type="date" name="startdate_1" id="startdate_1" />
+          </div>
+
+          <div class="input-group">
+            <label for="enddate_1">End Date</label>
+            <input type="date" name="enddate_1" id="enddate_1" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="Project_description1">Work 1 description</label>
+          <textarea
+            name="Work_description1"
+            id="Project_description1"
+            class="form-textarea"
+            placeholder="{{ Work.Work_description2 }}"
+            
+            ></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="Project_name2">Work 2 name</label>
+          <input
+            type="text"
+            name="Work_name2"
+            id="Project_name2"
+            class="form-input"
+            placeholder="Example: Portfolio Site Refresh"
+            value="{{ Work.Work_name2 }}"
+          />
+        </div>
+        <div class="date-range">
+          <div class="input-group">
+            <label for="startdate_1">Start Date</label>
+            <input type="date" name="startdate_2" id="startdate_1" />
+          </div>
+
+          <div class="input-group">
+            <label for="enddate_1">End Date</label>
+            <input type="date" name="enddate_2" id="enddate_1" />
+          </div>
+        </div>
+        <div class="field-group">
+          <label for="Project_description2">Work 2 description</label>
+          <textarea
+            name="Work_description2"
+            id="Project_description2"
+            class="form-textarea"
+            placeholder="Keep it crisp, specific, and results-focused."
+          ></textarea>
+          <div class="link-page">
+        <div class="link-list">
+          <div class="link_conainer">
+            <span class="prefix">http://</span>
+            <input
+              class="myinput-link"
+              placeholder="Site.com"
+              name="web_link1"
+              value="{{  web_link.web_link1 }}"
+            />
+            <span class="link-icon"> 🔗 </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="link-page">
+        <div class="link-list">
+          <div class="link_conainer">
+            <span class="prefix">http://</span>
+            <input
+              class="myinput-link"
+              placeholder="Site.com"
+              name="web_link2"
+              value="{{ web_link.web_link1 }}"
+            />
+            <span class="link-icon"> 🔗 </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="link-page">
+        <div class="link-list">
+          <div class="link_conainer">
+            <span class="prefix">http://</span>
+            <input
+              class="myinput-link"
+              placeholder="Site.com"
+              name="web_link3"
+            />
+            <span class="link-icon"> 🔗 </span>
+          </div>
+        </div>
+      </div>
+        <button type="submit">Submit</button>
+                </form>
+
+</body>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpb5zoSMXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</html>

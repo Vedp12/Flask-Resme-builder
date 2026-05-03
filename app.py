@@ -22,24 +22,22 @@ def detail():
         Full_name = request.form["Full_name"]
         email = request.form["email"]
         phone = request.form["phone"]
-        address = request.form["address"]  
         
         Resume_header = Header_model(
             Full_name=Full_name,
             email=email,
             phone=phone,
-            address=address  
         )
         db.session.add(Resume_header)
         db.session.commit()
-        return redirect(url_for("Template", header_id=Resume_header.Template_id))
+        return redirect(url_for("Description", header_id=Resume_header.Template_id))
     
     return render_template("Header_section.html")
 
 
 
-@app.route("/Template/<int:header_id>",methods = ["GET","POST"])
-def Template(header_id):
+@app.route("/Description/<int:header_id>",methods = ["GET","POST"])
+def Description(header_id):
     
     if request.method == "POST":
         User_Description = request.form["User_Description"]
@@ -123,23 +121,74 @@ def link_template(header_id):
          )
          db.session.add(Resume_links)
          db.session.commit()
-         return redirect(url_for("main_page",header_id = Resume_links.web_link_id))
+         return redirect(url_for("main",header_id = Resume_links.web_link_id))
     return render_template("link_section.html") 
 
-
-@app.route("/main/<int:header_id>",methods = ["GET","POST"])
-def main_page(header_id):
-    Header= Header_model.query.get_or_404(header_id)
-    Description= Description_model.query.get_or_404(header_id)
-    Project= Project_model.query.get_or_404(header_id)
-    Work= Work_model.query.get_or_404(header_id)
-    web_link= web_link_model.query.get_or_404(header_id)
+@app.route("/main/<int:header_id>")
+def main(header_id):
+    Header = Header_model.query.get_or_404(header_id)
+    Description = Description_model.query.get_or_404(header_id)
+    Project = Project_model.query.get_or_404(header_id)
+    Work = Work_model.query.get_or_404(header_id)
+    web_link = web_link_model.query.get_or_404(header_id)
     return render_template("main.html",
                            Header = Header,
                            Description = Description,
                            Project = Project,
                            Work = Work,
                            web_link = web_link,
+                           header_id = header_id
                            )
+ 
+@app.route("/edit_page/<int:header_id>",methods = ["GET","POST"])
+def edit_page(header_id):
+    # get_or_404 returns the model instance directly
+    Header = Header_model.query.get_or_404(header_id)
+    Description = Description_model.query.get_or_404(header_id)
+    Project = Project_model.query.get_or_404(header_id)
+    Work = Work_model.query.get_or_404(header_id)
+    web_link = web_link_model.query.get_or_404(header_id)
+
+    if request.method == "POST":
+        # Update Header
+        if Header:
+            Header.Full_name = request.form.get("Full_name", Header.Full_name)
+            Header.email = request.form.get("email", Header.email)
+            Header.phone = request.form.get("phone", Header.phone)
+        # Update Description
+        if Description:
+            Description.User_Description = request.form.get("User_Description", Description.User_Description)
+            Description.skills1 = request.form.get("skills1", Description.skills1)
+            Description.skills2 = request.form.get("skills2", Description.skills2)
+            Description.skills3 = request.form.get("skills3", Description.skills3)
+            Description.skills4 = request.form.get("skills4", Description.skills4)
+        # Update Project
+        if Project:
+            Project.Project_name1 = request.form.get("Project_name1", Project.Project_name1)
+            Project.Project_name2 = request.form.get("Project_name2", Project.Project_name2)
+            Project.Project_description1 = request.form.get("Project_description1", Project.Project_description1)
+            Project.Project_description2 = request.form.get("Project_description2", Project.Project_description2)
+        # Update Work
+        if Work:
+            Work.Work_name1 = request.form.get("Work_name1", Work.Work_name1)
+            Work.Work_name2 = request.form.get("Work_name2", Work.Work_name2)
+            Work.Work_description1 = request.form.get("Work_description1", Work.Work_description1)
+            Work.Work_description2 = request.form.get("Work_description2", Work.Work_description2)
+        # Update web links
+        if web_link:
+            web_link.web_link1 = request.form.get("web_link1", web_link.web_link1)
+            web_link.web_link2 = request.form.get("web_link2", web_link.web_link2)
+            web_link.web_link3 = request.form.get("web_link3", web_link.web_link3)
+
+        db.session.commit()
+        return redirect(url_for("main", header_id=header_id))
+    return render_template("edit_page.html",
+                           header_id=header_id,
+                           Header = Header,
+                           Description = Description,
+                           Project = Project,
+                           Work = Work,
+                           web_link = web_link,)
+
 if __name__ == "__main__":
     app.run(debug=True, port=8001)

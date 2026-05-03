@@ -21,9 +21,9 @@
             <div class="resume_data">
                 <!-- Header: Personal Info -->
                 <header class="Resume_Data_header">
-                    <h2>{{ headers.Full_name }}</h2>
+                    <h2>{% block  content %}</h2>
                     <p class="detail_header">
-                        <b>{{ headers.email }} | {{ headers.phone }} | {{ headers.address }}</b>
+                        <b>{{% block  email %}} | {% block phone %}</b>
                     </p>
                 </header>
                 <div class="Resume_Data_body">
